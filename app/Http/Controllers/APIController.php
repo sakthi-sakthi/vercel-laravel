@@ -14,14 +14,14 @@ class APIController extends Controller {
             'message' => 'required|string',
         ]);
 
-        $formData = FormData::create($data);
+        $formDatas = FormData::create($data);
 
-        return response()->json(['message' => 'Data stored successfully', 'data' => $formData], 201);
+        return response()->json(['message' => 'Data stored successfully', 'data' => $formDatas], 201);
     }
 
     public function getFormData() {
-        $formData = FormData::all();
+        $formDatas = FormData::all();
 
-        return response()->json($formData, 200);
+        return response()->json($formDatas, 200);
     }
 }
