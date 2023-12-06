@@ -20,4 +20,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 
-Route::get('/catgeniusapi', [APIController::class, 'index']);
+// Route::get('/login', [APIController::class, 'index']);
+
+Route::post('store-form-data', [APIController::class, 'storeFormData']);
+Route::get('get-form-data', [APIController::class, 'getFormData']);
