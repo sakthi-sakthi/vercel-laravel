@@ -13,6 +13,7 @@ return new class extends Migration {
         Schema::create('form_data', function (Blueprint $table) {
             $table->string('name');
             $table->string('email');
+            $table->string('mobile');
             $table->text('message');
             $table->timestamps();
         });
