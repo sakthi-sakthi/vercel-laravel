@@ -8,8 +8,9 @@ return new class extends Migration {
     /**
      * Run the migrations.
      */
-    public function up() {
-        Schema::create('form_datas', function (Blueprint $table) {
+    public function up()
+    {
+        Schema::create('form_data', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('email');
@@ -22,7 +23,8 @@ return new class extends Migration {
     /**
      * Reverse the migrations.
      */
-    public function down(): void {
-        Schema::dropIfExists('form_datas');
+    public function down(): void
+    {
+        Schema::dropIfExists('form_data');
     }
 };
