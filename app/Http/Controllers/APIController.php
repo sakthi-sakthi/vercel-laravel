@@ -13,6 +13,7 @@ class APIController extends Controller
         $data = $request->validate([
             'name' => 'required|string',
             'email' => 'required|email',
+            'mobile' => 'required|digits:10',
             'message' => 'required|string',
         ]);
 
@@ -23,7 +24,7 @@ class APIController extends Controller
 
     public function getFormData()
     {
-        $formData = FormData::all();
+        $formData = FormData::all(['name', 'email', 'mobile', 'message']);
 
         return response()->json($formData, 200);
     }
