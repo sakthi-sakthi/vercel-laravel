@@ -23,6 +23,6 @@ return new class extends Migration {
      * Reverse the migrations.
      */
     public function down(): void {
-        Schema::dropIfExists('form_data');
+        Schema::dropIfExists('form_datas');
     }
 };
