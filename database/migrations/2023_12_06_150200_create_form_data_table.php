@@ -11,7 +11,6 @@ return new class extends Migration {
     public function up()
     {
         Schema::create('form_data', function (Blueprint $table) {
-            $table->id();
             $table->string('name');
             $table->string('email');
             $table->text('message');
