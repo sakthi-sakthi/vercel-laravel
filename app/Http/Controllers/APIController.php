@@ -24,8 +24,9 @@ class APIController extends Controller
 
     public function getFormData()
     {
-        $formData = FormData::all(['name', 'email', 'mobile', 'message']);
+        $formData = FormData::all(['id', 'name', 'email', 'mobile', 'message']);
 
         return response()->json($formData, 200);
     }
+
 }
